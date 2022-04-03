@@ -1,0 +1,58 @@
+/********************* style add task****************/
+.addTask{
+    text-align: center;
+   
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+input{
+    
+    width:40%;
+    padding: 12px 20px;
+    
+}
+input:active {
+    border: 1px;
+    border-color: #88888888; border-style: solid;
+}
+#btnAdd{
+font-size: 13px;
+padding: 13px;
+border: none;
+width:16%;
+height: 10%;
+background-color:slategray;
+color:#f2f2f2
+}
+#btnAdd:hover{
+    background-color:#292b36;
+}
+
+#btnAdd:active {
+   
+    transform: translateY(4px);
+}
+/*********************************STYLE TASKLIST*****************************/
+.tasklist{
+    width: 100%;
+    text-align: center;
+    margin :2%;
+    display: block;
+   flex-wrap: wrap;
+   background-color: crimson;
+ 
+
+}
+.tasks{
+    
+  padding: 1%;
+    
+}
+.btn{
+    padding: 1%;
+    margin:1%;
+    font-size:small;
+    width:100px;
+    height: 40px;
+}

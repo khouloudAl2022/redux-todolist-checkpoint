@@ -12,6 +12,7 @@ const Task = ({ task }) => {
     setEdit(false);
   };
   const handleCancel = () => {
+    seteditedText(task.text);
     setEdit(false);
   };
 

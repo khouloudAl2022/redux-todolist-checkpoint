@@ -22,10 +22,7 @@ export const deleteTask = (idTask) => {
   };
 };
 export const editTask = (id, textEdited) => {
-  return {
-    type: EDIT_TASK,
-    payload: {id , textEdited },
-  };
+  return { type: EDIT_TASK, payload: { textEdited, id } };
 };
 
 export const status_task = (id) => {

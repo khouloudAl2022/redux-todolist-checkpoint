@@ -35,18 +35,20 @@ color:#f2f2f2
 }
 /*********************************STYLE TASKLIST*****************************/
 .tasklist{
-    width: 100%;
+    
     text-align: center;
     margin :2%;
     display: block;
    flex-wrap: wrap;
-   background-color: crimson;
+
  
 
 }
 .tasks{
     
   padding: 1%;
+background-color: #f2f2f2;
+margin:2%
     
 }
 .btn{
@@ -55,4 +57,7 @@ color:#f2f2f2
     font-size:small;
     width:100px;
     height: 40px;
+}
+#btnDone{
+    background-color: darkorange;
 }

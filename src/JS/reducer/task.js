@@ -16,10 +16,7 @@ const initialState = {
 const taskReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TASK:
-      return {
-        ...state,
-        taskList: [...state.taskList, action.payload],
-      };
+      return { ...state, taskList: [...state.taskList, action.payload] };
     case DELETE_TASK:
       return {
         ...state,
@@ -30,7 +27,7 @@ const taskReducer = (state = initialState, action) => {
         ...state,
         taskList: state.taskList.map((task) =>
           task.id == action.payload.id
-            ? { ...task, text: payload.textEdited }
+            ? { ...task, text: action.payload.textEdited }
             : task
         ),
       };

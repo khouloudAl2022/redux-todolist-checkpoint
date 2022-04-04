@@ -4,24 +4,22 @@ import Task from "./Task";
 
 const TaskList = () => {
   const tasks = useSelector((store) => store.taskReducer.taskList);
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("all");
   return (
     <div className="tasklist">
-      <select>
-        <option value="done" onClick={() => setFilter("Done")}>
-          Done
-        </option>
-        <option value="undone" onClick={() => setFilter("Undone")}>
-          Undone
-        </option>
-      </select>
+      <div>
+        <button onClick={() => setFilter("all")}>all</button>
+        <button onClick={() => setFilter("Done")}>Done</button>
+        <button onClick={() => setFilter("Undone")}>Undone</button>
+      </div>
+
       {filter == "done"
         ? tasks
-            .filter((el) => el.done == true)
+            .filter((el) => el.done === true)
             .map((el) => <Task task={el} key={el.id} />)
         : filter == "undone"
         ? tasks
-            .filter((el) => el.done == false)
+            .filter((el) => el.done === false)
             .map((el) => <Task task={el} key={el.id} />)
         : tasks.map((el) => <Task task={el} key={el.id} />)}
     </div>
